@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Coins - بازی کلیک</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="score">
+            <span id="score">0</span>
+        </div>
+        <div class="circle" onclick="incrementScore()">
+            کلیک کن
+        </div>
+        <div class="limit">
+            کلیک‌ها باقی‌مانده: <span id="clicksLeft">200</span>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- باکس جدید برای frens, tasks, wallet و upgrade -->
+        <div class="info-box">
+            <div class="box-item">frens</div>
+            <div class="box-item">tasks</div>
+            <div class="box-item">wallet</div>
+            <div class="box-item" onclick="openUpgradePage()">Upgrade</div> <!-- دکمه Upgrade -->
+        </div>
+    </div>
+
+    <!-- مدال (پاپ‌آپ) برای صفحه ارتقاء -->
+    <div id="upgradeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUpgradePage()">&times;</span>
+            <h2>Upgrade your clicks</h2>
+            <p>Currently, each click gives <span id="currentUpgradePoints">1</span> point.</p>
+            <button onclick="upgradeClickPoints()">Upgrade to 2 points per click</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
